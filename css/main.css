@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --dk-primary-color: #673AB7;
+  --lg-primary-color: #D1C4E9;
+
+  --accent-color: #607D8B;
+  --primary-text: #212121;
+  --secondary-text: #757575;
+
+  --icons: #FFFFFF;
+  --divider: #BDBDBD;
+
+}
+
+
+body {
+  background-color: var(--divider);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  min-height: 60px;
+  background-color: var(--dk-primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.nav__hamb-btn,
+.nav__prof-btn {
+  color: var(--icons);
+  flex: 0 0 48px;
+  display: block;
+}
+
+.nav__title {
+  color: var(--primary-text);
+  text-transform: uppercase;
+  flex: 1;
+}
+
+main {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  background-color: var(--lg-primary-color);
+}
+
+.main__task-list {
+  background-color: red;
+}
+
+.main__no-task {
+
+  opacity: .4;
+  z-index: 0;
+  color: var(--secondary-text);
+}
+
+.dialog__task {
+  border: none;
+
+  min-height: 480px;
+  min-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 24px 16px;
+  border-radius: 16px;
+}
+
+.dialog__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-text);
+  flex: 0 0 auto;
+}
+
+.dialog__header h2 {
+  flex: 1 0 auto;
+  text-align: start;
+}
+
+
+.dialog__form {
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+
+  padding: 8px;
+
+
+}
+
+.dialog__form * {
+  width: 100%;
+}
+
+.dialog__form label {
+  color: var(--secondary-text);
+  display: block;
+}
+
+.form__text {
+  color: var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__text input {
+  color: var(--primary-text);
+  border-radius: 4px;
+  line-height: 48px;
+  font-size: 24px;
+  border: 1px solid var(--primary-text);
+  outline: none;
+}
+
+/* .form__text * {
+  width: 100%;
+} */
+
+.form__select {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__select select {
+  height: 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--primary-text);
+}
+
+.form__text-area {
+  color: var(--secondary-text);
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.form__text-area textarea {
+  resize: none;
+  width: 100%;
+  outline: none;
+
+}
+
+.form__prioridad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.prioridad__checkers {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+}
+
+.custom_check {
+  flex: 0 0 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom_check input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  width: 16px;
+}
+
+
+
+.form__prioridad * {
+  border: none;
+  outline: none;
+
+}
+
+.form__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.form__buttons * {
+  flex: 0 0 60px;
+}
+
+
+
+.btn {
+  background-color: var(--accent-color);
+  color: var(--icons);
+  border: none;
+  font-size: 16px;
+}
+
+
+
+.btn--add {
+  position: fixed;
+
+  height: 60px;
+  width: 60px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+
+  bottom: 16px;
+  right: 16px;
+}
+
+.btn--add i {
+  display: block;
+  font-size: 32px;
+}
+
+.btn--close {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--divider);
+}
+
+.rounder {
+  border-radius: 50%;
+}
+
+.round-sm {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.bg--grey {
+  background-color: grey;
+}
+
+.bg--green {
+  background-color: green;
+}
+
+.bg--orange {
+  background-color: orange;
+}
+
+.bg--red {
+  background-color: red;
+}

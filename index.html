@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f71ca4e003.js" crossorigin="anonymous"></script>
+
+  <!-- Css -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script defer src="./scripts/main.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <a href="#" class="nav__hamb-btn"><i class="fa-solid fa-bars"></i></a>
+      <span class="nav__title">Lista de Tareas</span>
+      <a href="#" class="nav__prof-btn"><i class="fa-solid fa-user"></i></a>
+    </nav>
+    <main>
+      <ul class="main__task-list" id="task-list">
+      </ul>
+      <div class="main__no-task">
+        <img src="./assets/images/theobroma_dogface3.svg" alt="" height="200px" width="160px">
+        <p>Nada para hacer</p>
+      </div>
+      <dialog id="add-task" class="dialog__task">
+        <div class="dialog__container">
+          <div class="dialog__header">
+            <h2> Ingresar una tarea</h2>
+            <button class="btn btn--close rounder" id="close-dialog"><img src="./assets/images/icons8-multiply-26.png"
+                alt="close button" srcset="" height="24px" width="24px
+                "></button>
+
+          </div>
+          <form action="#" method="dialog" class="dialog__form" id="task-form">
+            <div class="form__text">
+              <label for="name">Nombre de la tarea</label>
+              <input type="text" name="name" class="" id="form-name">
+            </div>
+
+            <div class="form__select">
+              <label for="tipo">Tipo de tarea</label>
+              <select name="tipo" id="form-type">
+                <option value="personal">Personal</option>
+                <option value="domestica">Domestica</option>
+                <option value="entrenamiento">Entrenamiento</option>
+                <option value="laboral">Laboral</option>
+              </select>
+            </div>
+            <div class="form__text-area">
+              <label for="descripcion">Descripcion</label>
+              <textarea name="descripcion" id="form-desc" cols="30" rows="5"></textarea>
+            </div>
+            <div class="form__prioridad">
+              <label for="prioridad">Prioridad</label>
+              <div class="prioridad__checkers">
+                <div class="custom_check">
+                  <input type="checkbox" name="prioridad" id="p-none" class="form__priority" checked>
+                  <span class="checkmark bg--grey"></span>
+                </div>
+                <div class="custom_check">
+                  <input type="checkbox" name="prioridad" id="p-1" class="form__priority" checked>
+                  <span class="checkmark bg--green"></span>
+                </div>
+                <div class="custom_check">
+                  <input type="checkbox" name="prioridad" id="p-2" class="form__priority" checked>
+                  <span class="checkmark bg--orange"></span>
+                </div>
+                <div class="custom_check">
+                  <input type="checkbox" name="prioridad" id="p-3" class="form__priority" checked>
+                  <span class="checkmark bg--red"></span>
+                </div>
+              </div>
+
+            </div>
+            <div class="form__buttons">
+              <button class="btn round-sm" id="cancel-task">Cancel</button>
+              <button class="btn round-sm" id="new-task">Add</button>
+            </div>
+          </form>
+
+        </div>
+      </dialog>
+      <button id="open-dialog" class="btn btn--add rounder"><i class="fa-solid fa-plus"></i></button>
+    </main>
+  </div>
+
+
+</body>
+
+</html>
